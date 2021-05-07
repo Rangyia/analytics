@@ -1,4 +1,4 @@
-# :zap: samplecompany Health Check
+# :zap: Company Analytics
 
 * PostgreSQL Express React Node (PERN) full-stack app, integrates React frontend with Node.js backend that is deployed to Heroku.
 *** Note: to open web links in a new window use: _ctrl+click on link_ /  _cmd+click on link_**
