@@ -1,0 +1,29 @@
+.navSideBar {
+  background-color: rgba(34,36,38,.15) !important;
+}
+
+.dropdownSidebar {
+  border-color: transparent !important;
+  background-color: transparent!important;
+  border-bottom-color: red !important;
+  cursor: pointer;
+  color: white !important;
+  transition-duration: .6s !important;
+  transition: ease-out all .3s !important;
+}
+.dropdownSidebar:hover {
+  box-shadow: 0 0 8px red !important;
+  transform: scale(1.05) !important;
+}
+
+.dropdownItem {
+  border-color: transparent !important;
+  background-color:  whitesmoke !important;
+  cursor: pointer;
+  color: white !important;
+}
+
+.sidebar-btn {
+  margin: 100 !important;
+  margin-top: 60% !important;
+}

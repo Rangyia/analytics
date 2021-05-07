@@ -1,0 +1,52 @@
+.tileCard {
+  border-radius: 0 !important;
+  margin: 10px 65px !important;
+}
+
+.tileCardIcon {
+  float: right;
+}
+
+.tileCardHeader {
+  color: white !important;
+}
+
+.tileCardValue {
+  font-weight: 900 !important;
+  color: white !important;
+}
+
+.status {
+  font-size: 32px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.titleCardStatusArrowDown {
+  color: #EC3E3E !important;
+}
+
+.titleCardStatusArrowUp {
+  color: #42E780 !important;
+}
+
+.titleCardStatusArrowNone {
+  color: #1369f2 !important;
+}
+
+.titleCardStatusPercent {
+  color: white !important;
+}
+
+.titleCardStatus {
+  width: 100% !important;
+  vertical-align: bottom !important;
+  margin-left: 10px;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.titleCardDate {
+  font-size: 12px !important;
+  color: white !important;
+}

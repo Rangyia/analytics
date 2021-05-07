@@ -1,0 +1,17 @@
+.ticketsGraphCard {
+  height: 430px !important;
+  width: 640px !important;
+}
+
+.ticketsGraph {
+  height: 400px;
+  width: 600px;
+}
+
+.overlay:hover{
+  transition: 0s !important;
+  opacity: 1 !important;
+  /* -webkit-filter: blur(1px) !important; */
+  filter: blur(0px) ;
+  cursor: pointer;
+}

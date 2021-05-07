@@ -1,0 +1,20 @@
+.title-bar-container {
+    padding: 0 5% !important;
+    display: flex !important;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.title-bar-header {
+    width: 100%;
+    align-self: center;
+}
+
+.title-bar-menu {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.title-bar-logo {
+    padding: 0 30px !important;
+}

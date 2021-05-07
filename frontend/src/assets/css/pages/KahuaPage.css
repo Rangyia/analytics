@@ -1,0 +1,80 @@
+.segmentStyle {
+    background-color: #1D1B20 !important;
+    color: white !important;
+    min-height: 85vh !important;
+    max-width: 190vh !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.overlay:hover{
+    transition: .5s !important;
+    opacity: .4 !important;
+    /* -webkit-filter: blur(1px) !important; */
+    filter: blur(2px) ;
+    cursor: pointer;
+}
+.overlay {
+    transition: .5s ease-in-out !important;
+    opacity: 1;
+}
+.card:hover {
+  transition: .5s !important;
+  border-radius: 25px !important;
+  
+}
+
+.card {
+  transition: .5s ease-in-out !important;
+  height: 150px !important;
+  width: 20% !important;
+  border-radius: 8px !important;
+  background-color: #242228 !important;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;    
+}
+.button {
+  opacity: 0 ;
+  transition: .3s !important;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+.card:hover .button {
+  transition: .3s  !important; 
+  opacity: 1 ;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+
+.headerStyle {
+  background-color: #101012 !important;
+  border-color: transparent !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.headerText {
+  margin-top: .5% !important;
+  margin-bottom: .5% !important;
+  padding-left: 2% !important;
+  font-weight: 200 !important;
+}
+.cardText {
+  color: white !important;
+  font-weight: 600 !important;
+  padding-top: 3% !important;
+}
+
+.statisticValue {
+  color: white !important;
+  padding-bottom: 3% !important;
+}
+
+.statisticLabel {
+  color: white !important;
+  font-weight: lighter !important;
+  padding-bottom: 3% !important;
+}

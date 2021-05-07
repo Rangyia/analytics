@@ -1,0 +1,28 @@
+.dropdownColor {
+    background-color: rgba(34,36,38,.15) !important;
+}
+
+.dropdownItemColor {
+    border-color: crimson !important;
+    color: white;
+}
+
+.nav-top-bar {
+    background-color: rgba(34,36,38,.15) !important;
+    border-bottom-color: red !important;
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+}
+
+.nav-col-1 {
+    justify-self: start !important;
+}
+
+.nav-col-2 {
+    justify-self: center !important;
+}
+
+.nav-col-3 {
+    justify-self: end !important;
+}
