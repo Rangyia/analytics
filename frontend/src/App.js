@@ -18,18 +18,6 @@ import analytics from "./pages/analytics";
 import NavTopBar from './components/nav/NavTopBar'
 import NavSideBar from './components/nav/NavSideBar'
 
-// company logos
-import logo_arco from './assets/img/img-banner-arco.png';
-import logo_cbre from './assets/img/img-banner-cbre.png';
-import logo_cisco from './assets/img/img-banner-cisco.png';
-import logo_clark from './assets/img/img-banner-clark.png';
-import logo_crossland from './assets/img/img-banner-crossland.png';
-import logo_samplecompany from './assets/img/img-banner-samplecompany.png';
-import logo_lendlease from './assets/img/img-banner-lendlease.png';
-import logo_mayo from './assets/img/img-banner-mayo.png';
-import logo_ptc from './assets/img/img-banner-ptc.png';
-import logo_thirdparty from './assets/img/img-banner-thirdparty.png';
-
 /**
  * @param {*} component Page component to be rendered
  * @param {*} rest Any optional props to be used into the page components

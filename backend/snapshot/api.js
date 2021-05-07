@@ -8,8 +8,8 @@ const axios = require('axios');
 
 exports.getCompanies = async function () {
     return await database.query(
-        `SELECT PGP_SYM_DECRYPT(domain.name :: bytea, '${process.env.DB_ENCRYPTION_KEY}') AS name, id
-        FROM domain`
+        `SELECT PGP_SYM_DECRYPT(analytic.name :: bytea, '${process.env.DB_ENCRYPTION_KEY}') AS name, id
+        FROM analytic`
     );
 }
 
@@ -22,7 +22,7 @@ exports.getsamplecompanyAppDataCount = async function (company_name, entityDef, 
 
         let headers = {
             hostname: "devupdateservice.samplecompany.com",
-            path: `/v1/domains/${company_key}/projects/0/query`,
+            path: `/v1/analytics/${company_key}/projects/0/query`,
             method: 'POST',
             headers: {
                 'Authorization': auth,
@@ -41,7 +41,7 @@ exports.getsamplecompanyAppDataCount = async function (company_name, entityDef, 
             }
         }
 
-        return axios.post(`https://${process.env.samplecompanyENVIRONMENT}service.samplecompany.com/v1/domains/${company_key}/projects/0/query`, body, headers)
+        return axios.post(`https://${process.env.samplecompanyENVIRONMENT}service.samplecompany.com/v1/analytics/${company_key}/projects/0/query`, body, headers)
             .then(res => res.data.count)
             .catch((err) => {
                 console.log("API error calling samplecompany: ", err);
@@ -63,7 +63,7 @@ exports.getUserCount = async function (company_name) {
             'Accept': 'application.json'
         };
 
-        return axios.get(`https://${process.env.samplecompanyENVIRONMENT}service.samplecompany.com/v1/domains/${company_key}/projects/0/admin/groups/contacts`, { headers })
+        return axios.get(`https://${process.env.samplecompanyENVIRONMENT}service.samplecompany.com/v1/analytics/${company_key}/projects/0/admin/groups/contacts`, { headers })
             .then(res => res.data.length)
             .catch((err) => {
                 console.log("API error calling samplecompany: ", err);

@@ -19,13 +19,13 @@ if (process.env.NODE_ENV === "production") {
 /* ROUTE MAPPER */
 const companiesRouter = require('./backend/routes/companies');
 const logsRouter = require('./backend/routes/logs');
-const domainsRouter = require('./backend/routes/domains');
+const analyticsRouter = require('./backend/routes/analytics');
 const ticketsRouter = require('./backend/routes/tickets');
 
 /* ROUTER STACK */
 app.use('/api/v1/companies', companiesRouter);
 app.use('/api/v1/logs', logsRouter);
-app.use('/api/v1/domains', domainsRouter);
+app.use('/api/v1/analytics', analyticsRouter);
 app.use('/api/v1/tickets', ticketsRouter);
 
 /* 

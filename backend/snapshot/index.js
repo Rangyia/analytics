@@ -17,7 +17,7 @@ const _run_ = async (date, open_date) => {
 
         // Schedule log
         const log = new Object();
-        log['domain_id'] = company.id;
+        log['analytic_id'] = company.id;
 
         // Module: analytics
         const ticketModule = await API.getTicketCount(company.name, date, open_date);
@@ -189,7 +189,7 @@ const _run_ = async (date, open_date) => {
 
                     time_to_resolve = ${res.time_to_resolve}
             WHERE 
-                date(date)='1-1-2021' AND domain_id=${res.domain_id};`
+                date(date)='1-1-2021' AND analytic_id=${res.analytic_id};`
         );
     }
     

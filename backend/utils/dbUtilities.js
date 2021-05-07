@@ -2,19 +2,19 @@ const database = require('../database/database');
 
 exports.get_company_key = async function (comp_name) {
     return await database.query(
-        `SELECT PGP_SYM_DECRYPT(key :: bytea, '${process.env.DB_ENCRYPTION_KEY}') AS key FROM domain WHERE LOWER('${comp_name}') ~ LOWER(PGP_SYM_DECRYPT(name :: bytea, '${process.env.DB_ENCRYPTION_KEY}'))`
+        `SELECT PGP_SYM_DECRYPT(key :: bytea, '${process.env.DB_ENCRYPTION_KEY}') AS key FROM analytic WHERE LOWER('${comp_name}') ~ LOWER(PGP_SYM_DECRYPT(name :: bytea, '${process.env.DB_ENCRYPTION_KEY}'))`
     ).then(data => data.rows[0]['key'].toString());
 };
 
 exports.get_company_id = async function (comp_name) {
     return await database.query(
-        `SELECT id FROM domain WHERE LOWER('${comp_name}')=LOWER(PGP_SYM_DECRYPT(name :: bytea, '${process.env.DB_ENCRYPTION_KEY}'))`
+        `SELECT id FROM analytic WHERE LOWER('${comp_name}')=LOWER(PGP_SYM_DECRYPT(name :: bytea, '${process.env.DB_ENCRYPTION_KEY}'))`
     ).then(data => data.rows[0]['id'].toString());
 };
 
 exports.verify_company_name = async function (comp_name) {
     return await database.query(
-        `SELECT * FROM domain WHERE LOWER('${comp_name}')=LOWER(PGP_SYM_DECRYPT(name :: bytea, '${process.env.DB_ENCRYPTION_KEY}'))`
+        `SELECT * FROM analytic WHERE LOWER('${comp_name}')=LOWER(PGP_SYM_DECRYPT(name :: bytea, '${process.env.DB_ENCRYPTION_KEY}'))`
     ).then(data => data.rows);
 };
 

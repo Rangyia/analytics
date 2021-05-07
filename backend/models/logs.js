@@ -34,7 +34,7 @@ exports.queryFields = async function (companyName, offset) {
         FROM 
             log_samplecompany
         WHERE 
-            log_samplecompany.domain_id=${id}
+            log_samplecompany.analytic_id=${id}
         ORDER BY date DESC
         LIMIT ${offset}`
     ).then(res => {
@@ -50,7 +50,7 @@ exports.queryFields = async function (companyName, offset) {
         FROM 
             log_analytics
         WHERE 
-            log_analytics.domain_id=${id}
+            log_analytics.analytic_id=${id}
         ORDER BY date DESC
         LIMIT ${offset}`
     ).then(res => {
