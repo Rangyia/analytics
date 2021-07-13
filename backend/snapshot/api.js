@@ -21,7 +21,7 @@ exports.getsamplecompanyAppDataCount = async function (company_name, entityDef, 
         let auth = 'Basic ' + Buffer.from(process.env.API_USER + ':' + process.env.API_PASSWORD).toString('base64');
 
         let headers = {
-            hostname: "devupdateservice.samplecompany.com",
+            hostname: "apiservice.samplecompany.com",
             path: `/v1/analytics/${company_key}/projects/0/query`,
             method: 'POST',
             headers: {
@@ -33,11 +33,8 @@ exports.getsamplecompanyAppDataCount = async function (company_name, entityDef, 
 
         let body = {
             'PropertyName': 'Query',
-            'EntityDef': entityDef,
-            'Name': name,
-            "Skip": "1000000",
-            'Partition': {
-                'Scope': 'Any'
+            'Scope': {
+                'Sample': 'Any'
             }
         }
 
